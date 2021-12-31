@@ -59,7 +59,7 @@
       <WarningLevel>Level3</WarningLevel>
       <MinimalRebuild>true</MinimalRebuild>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_DEBUG;WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>C_ONLY;_CRT_SECURE_NO_WARNINGS;_DEBUG;WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderOutputFile>.\debug\ref_soft.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
     <Midl>
@@ -96,7 +96,7 @@
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level4</WarningLevel>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>C_ONLY;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderOutputFile>.\release\ref_soft.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
     <Midl>
@@ -149,69 +149,6 @@
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="ref_soft.def" />
-    <MASM Include="r_aclipa.asm">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ml /c /Cp /coff /Fo$(OutDir)%(Filename).obj /Zm /Zi %(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OUTDIR)\$(InputName).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ml /c /Cp /coff /Fo$(OutDir)%(Filename).obj /Zm /Zi %(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OUTDIR)\$(InputName).obj;%(Outputs)</Outputs>
-      <FileType>Document</FileType>
-    </MASM>
-    <MASM Include="r_draw16.asm">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ml /c /Cp /coff /Fo$(OutDir)%(Filename).obj /Zm /Zi %(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OUTDIR)\$(InputName).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ml /c /Cp /coff /Fo$(OutDir)%(Filename).obj /Zm /Zi %(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OUTDIR)\$(InputName).obj;%(Outputs)</Outputs>
-      <FileType>Document</FileType>
-    </MASM>
-    <MASM Include="r_drawa.asm">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ml /c /Cp /coff /Fo$(OutDir)%(Filename).obj /Zm /Zi %(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OUTDIR)\$(InputName).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ml /c /Cp /coff /Fo$(OutDir)%(Filename).obj /Zm /Zi %(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OUTDIR)\$(InputName).obj;%(Outputs)</Outputs>
-      <FileType>Document</FileType>
-    </MASM>
-    <MASM Include="r_edgea.asm">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ml /c /Cp /coff /Fo$(OutDir)%(Filename).obj /Zm /Zi %(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OUTDIR)\$(InputName).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ml /c /Cp /coff /Fo$(OutDir)%(Filename).obj /Zm /Zi %(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OUTDIR)\$(InputName).obj;%(Outputs)</Outputs>
-      <FileType>Document</FileType>
-    </MASM>
-    <MASM Include="r_polysa.asm">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ml /c /Cp /coff /Fo$(OutDir)%(Filename).obj /Zm /Zi %(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OUTDIR)\$(InputName).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ml /c /Cp /coff /Fo$(OutDir)%(Filename).obj /Zm /Zi %(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OUTDIR)\$(InputName).obj;%(Outputs)</Outputs>
-      <FileType>Document</FileType>
-    </MASM>
-    <MASM Include="r_scana.asm">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ml /c /Cp /coff /Fo$(OutDir)%(Filename).obj /Zm /Zi %(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OUTDIR)\$(InputName).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ml /c /Cp /coff /Fo$(OutDir)%(Filename).obj /Zm /Zi %(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OUTDIR)\$(InputName).obj;%(Outputs)</Outputs>
-      <FileType>Document</FileType>
-    </MASM>
-    <MASM Include="r_spr8.asm">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ml /c /Cp /coff /Fo$(OutDir)%(Filename).obj /Zm /Zi %(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OUTDIR)\$(InputName).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ml /c /Cp /coff /Fo$(OutDir)%(Filename).obj /Zm /Zi %(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OUTDIR)\$(InputName).obj;%(Outputs)</Outputs>
-      <FileType>Document</FileType>
-    </MASM>
-    <MASM Include="r_surf8.asm">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ml /c /Cp /coff /Fo$(OutDir)%(Filename).obj /Zm /Zi %(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OUTDIR)\$(InputName).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ml /c /Cp /coff /Fo$(OutDir)%(Filename).obj /Zm /Zi %(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OUTDIR)\$(InputName).obj;%(Outputs)</Outputs>
-      <FileType>Document</FileType>
-    </MASM>
-    <MASM Include="r_varsa.asm">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ml /c /Cp /coff /Fo$(OutDir)%(Filename).obj /Zm /Zi %(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OUTDIR)\$(InputName).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ml /c /Cp /coff /Fo$(OutDir)%(Filename).obj /Zm /Zi %(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OUTDIR)\$(InputName).obj;%(Outputs)</Outputs>
-      <FileType>Document</FileType>
-    </MASM>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\client\ref.h" />

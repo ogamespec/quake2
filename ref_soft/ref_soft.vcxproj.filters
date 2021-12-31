@@ -122,33 +122,4 @@
       <Filter>Resource Files</Filter>
     </CustomBuild>
   </ItemGroup>
-  <ItemGroup>
-    <MASM Include="r_aclipa.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="r_draw16.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="r_drawa.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="r_edgea.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="r_polysa.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="r_scana.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="r_spr8.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="r_surf8.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-    <MASM Include="r_varsa.asm">
-      <Filter>Source Files</Filter>
-    </MASM>
-  </ItemGroup>
 </Project>
