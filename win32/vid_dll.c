@@ -116,11 +116,11 @@ DLL GLUE
 void VID_Printf (int print_level, char *fmt, ...)
 {
 	va_list		argptr;
-	char		msg[MAXPRINTMSG];
+	char		msg[MAXPRINTMSG] = { 0 };
 	static qboolean	inupdate;
 	
 	va_start (argptr,fmt);
-	vsprintf (msg,fmt,argptr);
+	vsnprintf (msg,sizeof(msg)-1,fmt,argptr);
 	va_end (argptr);
 
 	if (print_level == PRINT_ALL)
@@ -141,11 +141,11 @@ void VID_Printf (int print_level, char *fmt, ...)
 void VID_Error (int err_level, char *fmt, ...)
 {
 	va_list		argptr;
-	char		msg[MAXPRINTMSG];
+	char		msg[MAXPRINTMSG] = { 0 };
 	static qboolean	inupdate;
 	
 	va_start (argptr,fmt);
-	vsprintf (msg,fmt,argptr);
+	vsnprintf (msg,sizeof(msg)-1,fmt,argptr);
 	va_end (argptr);
 
 	Com_Error (err_level,"%s", msg);
