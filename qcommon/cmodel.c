@@ -1377,7 +1377,7 @@ trace_t		CM_BoxTrace (vec3_t start, vec3_t end,
 	if (start[0] == end[0] && start[1] == end[1] && start[2] == end[2])
 	{
 		int		leafs[1024];
-		int		i, numleafs;
+		int		num_leafs;
 		vec3_t	c1, c2;
 		int		topnode;
 
@@ -1389,8 +1389,8 @@ trace_t		CM_BoxTrace (vec3_t start, vec3_t end,
 			c2[i] += 1;
 		}
 
-		numleafs = CM_BoxLeafnums_headnode (c1, c2, leafs, 1024, headnode, &topnode);
-		for (i=0 ; i<numleafs ; i++)
+		num_leafs = CM_BoxLeafnums_headnode (c1, c2, leafs, 1024, headnode, &topnode);
+		for (i=0 ; i< num_leafs; i++)
 		{
 			CM_TestInLeaf (leafs[i]);
 			if (trace_trace.allsolid)
