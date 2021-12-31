@@ -117,7 +117,6 @@ void VID_Printf (int print_level, char *fmt, ...)
 {
 	va_list		argptr;
 	char		msg[MAXPRINTMSG] = { 0 };
-	static qboolean	inupdate;
 	
 	va_start (argptr,fmt);
 	vsnprintf (msg,sizeof(msg)-1,fmt,argptr);
@@ -142,7 +141,6 @@ void VID_Error (int err_level, char *fmt, ...)
 {
 	va_list		argptr;
 	char		msg[MAXPRINTMSG] = { 0 };
-	static qboolean	inupdate;
 	
 	va_start (argptr,fmt);
 	vsnprintf (msg,sizeof(msg)-1,fmt,argptr);
